@@ -1,0 +1,43 @@
+//
+//  StoryBoardNames.swift
+//  Adahi
+//
+//  Created by aboushady on 3/27/19.
+//  Copyright © 2019 LinkDevelopment. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+enum StoryBoardNames: String {
+    case main = "Main"
+    
+    
+    var instance : UIStoryboard {
+        return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
+    }
+    
+    func viewController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file) -> T {
+        let storyboardID = (viewControllerClass as UIViewController.Type).storyboardID
+        guard let scene = instance.instantiateViewController(withIdentifier: storyboardID) as? T else {
+            fatalError("ViewController with identifier \(storyboardID), not found in \(self.rawValue) Storyboard.\nFile : \(file) \nLine Number : \(line) \nFunction : \(function)")
+        }
+        return scene
+    }
+    
+    func initialViewController() -> UIViewController? {
+        return instance.instantiateInitialViewController()
+    }
+    
+}
+
+
+extension UIViewController{
+    class var storyboardID : String {
+        return "\(self)"
+    }
+    
+    static func instantiate(fromAppStoryboard appStoryboard: StoryBoardNames) -> Self {
+        return appStoryboard.viewController(viewControllerClass: self)
+    }
+}

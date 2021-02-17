@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  arapety
+
+  Created by mohamed aboushady on 10/7/19.
+  Copyright © 2019 approc. All rights reserved.
+*/
+
+//alert
+"alert.okBtnTitle" = "ok";
+"alert.cancelBtnTitle" = "cancel";
+
+//network error messages
+"network.error.OKBtnTitle" = "Ok";
+"network.error.dismissBtnTitle" = "Dismiss";
+"network.error.noConnection.title" = "No Internet Connection";
+"network.error.noConnection.message" = "Can't connect to the internet";
+"network.error.timedOut.title" = "Time out";
+"network.error.timedOut.message" = "Time out connecting to the server";
+"network.error.parse.title" = "Parse Error";
+"network.error.parse.message" = "Error While Parsing Response";
+"network.error.unknown.title" = "unknown Error";
+"network.error.timedOut.message" = "An Unknown Error Occured";
+"network.error.retryBtnTitle" = "Retry";

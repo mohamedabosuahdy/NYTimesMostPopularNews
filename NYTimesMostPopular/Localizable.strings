@@ -12,9 +12,10 @@
 
 //network error messages
 "network.error.OKBtnTitle" = "Ok";
+"network.error.retryBtnTitle" = "Re-try";
 "network.error.dismissBtnTitle" = "Dismiss";
 "network.error.noConnection.title" = "No Internet Connection";
-"network.error.noConnection.message" = "Can't connect to the internet";
+"network.error.noConnection.message" = "Can't connect to the internet, connect to the internet and press re-try";
 "network.error.timedOut.title" = "Time out";
 "network.error.timedOut.message" = "Time out connecting to the server";
 "network.error.parse.title" = "Parse Error";

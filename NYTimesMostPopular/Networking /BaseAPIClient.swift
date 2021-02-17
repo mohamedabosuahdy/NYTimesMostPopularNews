@@ -30,14 +30,20 @@ class BaseAPIClient: NSObject {
     
     static func performRequest<T:Decodable>(route: BaseAPIConfiguration, decoder: JSONDecoder = JSONDecoder(), completion: ((_ result: Result<T>) -> Void)?) {
         
-        sessionManager
-            .request(route)
-            .validate()
-            .responseJSON(completionHandler: { (response: DataResponse<Any>) in
-                handleResponse(response, decoder: decoder, completion: completion)
-            })
+        if Connectivity.isConnectedToInternet {
+               sessionManager.request(route).validate().responseJSON(completionHandler: { (response: DataResponse<Any>) in
+                   handleResponse(response, decoder: decoder, completion: completion)
+               })
+        }else{
+            ViewUtility.showAlert(title: "network.error.noConnection.title".localized, message: "network.error.noConnection.message".localized, okBtnTitle: "network.error.retryBtnTitle".localized, cancelBtnTitle: nil, okBtnAction: {
+                self.performRequest(route: route, completion: completion)
+            }, cancelBtnAction: nil)
+        }
+        
+        
     }
     
 
 }
+
 

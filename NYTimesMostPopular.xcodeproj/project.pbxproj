@@ -37,6 +37,8 @@
 		30378E7925DD62BE0080C781 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30378E7825DD62BD0080C781 /* View.swift */; };
 		30378E8525DD6CBD0080C781 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30378E8425DD6CBD0080C781 /* Colors.swift */; };
 		30378E8725DD6D390080C781 /* DataTypesExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30378E8625DD6D390080C781 /* DataTypesExtensions.swift */; };
+		30378E8925DD9BD30080C781 /* ReachabilityChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30378E8825DD9BD30080C781 /* ReachabilityChecker.swift */; };
+		30378E8B25DD9C300080C781 /* ViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30378E8A25DD9C300080C781 /* ViewUtility.swift */; };
 		757FCCCB76B275573D95E78A /* Pods_NYTimesMostPopularTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D4FB3EEB13EC32888D9993 /* Pods_NYTimesMostPopularTests.framework */; };
 		CA7C158C74980FA4C619D4CF /* Pods_NYTimesMostPopular_NYTimesMostPopularUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE81FC76E960D908838BB12 /* Pods_NYTimesMostPopular_NYTimesMostPopularUITests.framework */; };
 		EA72FF0BEC4E9F22BD3EEE8D /* Pods_NYTimesMostPopular.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA8553102733F6D8CDF24435 /* Pods_NYTimesMostPopular.framework */; };
@@ -98,6 +100,8 @@
 		30378E7825DD62BD0080C781 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		30378E8425DD6CBD0080C781 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		30378E8625DD6D390080C781 /* DataTypesExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTypesExtensions.swift; sourceTree = "<group>"; };
+		30378E8825DD9BD30080C781 /* ReachabilityChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityChecker.swift; sourceTree = "<group>"; };
+		30378E8A25DD9C300080C781 /* ViewUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUtility.swift; sourceTree = "<group>"; };
 		4DE81FC76E960D908838BB12 /* Pods_NYTimesMostPopular_NYTimesMostPopularUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTimesMostPopular_NYTimesMostPopularUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ECEDCECDB5E95AA8559F9DB /* Pods-NYTimesMostPopularTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimesMostPopularTests.debug.xcconfig"; path = "Target Support Files/Pods-NYTimesMostPopularTests/Pods-NYTimesMostPopularTests.debug.xcconfig"; sourceTree = "<group>"; };
 		88D4FB3EEB13EC32888D9993 /* Pods_NYTimesMostPopularTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTimesMostPopularTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +204,7 @@
 				30378E4825DD5B410080C781 /* Environment.swift */,
 				30378E4925DD5B410080C781 /* BaseAPIConfiguration.swift */,
 				30378E4525DD5B370080C781 /* BaseAPIClient.swift */,
+				30378E8825DD9BD30080C781 /* ReachabilityChecker.swift */,
 			);
 			path = "Networking ";
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 		30378E7A25DD62C20080C781 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				30378E8A25DD9C300080C781 /* ViewUtility.swift */,
 				30378E7825DD62BD0080C781 /* View.swift */,
 				30378E8625DD6D390080C781 /* DataTypesExtensions.swift */,
 			);
@@ -531,6 +537,8 @@
 				30378E7925DD62BE0080C781 /* View.swift in Sources */,
 				30378E4B25DD5B410080C781 /* Environment.swift in Sources */,
 				30378E1525DD5B0C0080C781 /* AppDelegate.swift in Sources */,
+				30378E8B25DD9C300080C781 /* ViewUtility.swift in Sources */,
+				30378E8925DD9BD30080C781 /* ReachabilityChecker.swift in Sources */,
 				30378E4625DD5B370080C781 /* BaseAPIClient.swift in Sources */,
 				30378E1725DD5B0C0080C781 /* SceneDelegate.swift in Sources */,
 				30378E5325DD5C020080C781 /* BaseViewControllerProtocol.swift in Sources */,

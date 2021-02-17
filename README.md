@@ -28,7 +28,8 @@ A simple app to hit the NY Times Most Popular Articles API and show a list of ar
 - [1] Most popular news
 - [2] News item details
 - [3] Flexability of back days
-- [4] Customizable design systme
+- [4] Customizable design system
+- [5] Supports dark mode
 
 ## Requirements
 

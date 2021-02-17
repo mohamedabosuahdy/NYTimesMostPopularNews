@@ -175,9 +175,9 @@ extension UIView{
     var allsidesShadow: Bool{
         set{
             self.layer.cornerRadius = self.viewCornerRadius
-            self.layer.shadowColor = UIColor.black.cgColor
+            self.layer.shadowColor = UIColor.systemGray.cgColor
             self.layer.shadowRadius = 5
-            self.layer.shadowOpacity = 0.2
+            self.layer.shadowOpacity = 0.4
             self.layer.shadowOffset = .zero
             }
         get{return self.dropShadow}

@@ -13,9 +13,6 @@ A simple app to hit the NY Times Most Popular Articles API and show a list of ar
 # NYTimesMostPopularNews
 <br />
 <p align="center">
-  <a href="https://avatars.githubusercontent.com/u/221409?s=200&v=4">
-    <img src="logo.jpeg" alt="Logo" width="80" height="80">
-  </a>
   <p align="center">
     NY Times Most Popular Articles API and show a list of articles
   </p>

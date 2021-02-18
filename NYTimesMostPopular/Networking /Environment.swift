@@ -15,7 +15,7 @@ enum Environment {
     
     var scheme: String {
         switch self {
-        case .staging:      return "http"
+        case .staging:      return "https"
         case .production:   return "https"
         }
     }
@@ -29,7 +29,7 @@ enum Environment {
     
     var port: Int? {
         switch self {
-        case .staging, .production:            return nil
+        case .staging, .production: return nil
         }
     }
     
@@ -45,7 +45,7 @@ enum Environment {
     var headers : [String : String]? {
         switch self {
         case .staging:      return nil
-        case .production:   return ["Authentication": "ProductionAPIKey"]
+        case .production:   return nil
         }
     }
     

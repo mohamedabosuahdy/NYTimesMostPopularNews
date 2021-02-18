@@ -12,7 +12,7 @@ import UIKit
 extension UIColor {
     
     
-    public static var appMainColor: UIColor
+    public static var MainColor: UIColor
     {
         return UIColor(named: "MainColor") ?? .black
     }

@@ -8,36 +8,25 @@
 
 import Foundation
 import UIKit
-import NVActivityIndicatorView
 
 
 class BaseViewController: UIViewController , BaseViewControllerProtocol {
-    
     private var viewTitle: String?
-    private var loadingIndicator: NVActivityIndicatorView?
+    private var loadingIndicator: UIActivityIndicatorView?
     private var navigationBarImage: UIImage?
     
     private lazy var activityIndicatorView:UIView  = {
         let centerPointX = self.view.center.x - 30
         let centerPointY = self.view.center.y - 30
         let containerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-        loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: centerPointX, y: centerPointY, width: 60, height: 60), type: nil, color: UIColor.appMainColor, padding: 0)
-        containerView.backgroundColor = UIColor.init(white: 0, alpha: 0.7)
+        loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: centerPointX, y: centerPointY, width: 60, height: 60))
+        loadingIndicator?.color = .MainColor
+        loadingIndicator?.style = .large
+        containerView.backgroundColor = .clear
         loadingIndicator?.startAnimating()
-        loadingIndicator?.color = UIColor.appMainColor
+        loadingIndicator?.color = UIColor.MainColor
         containerView.addSubview(loadingIndicator!)
         return containerView
-    }()
-    
-    private lazy var emptyDataSetView:UIView  = {
-        let centerPointX = self.view.center.x
-        let centerPointY = self.view.center.y
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 30))
-        label.center = self.view.center
-        label.text = NSLocalizedString("newsList.EmptyListLabel", comment: "")
-        let view = UIView.init(frame: CGRect(x: centerPointX , y: centerPointY, width: self.view.frame.width, height: self.view.frame.height))
-        view.backgroundColor = UIColor.appMainColor
-        return view
     }()
     
     
@@ -57,7 +46,7 @@ class BaseViewController: UIViewController , BaseViewControllerProtocol {
     func styleNavigationBar()  {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.barTintColor = .appMainColor
+        navigationController?.navigationBar.barTintColor = .MainColor
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white , NSAttributedString.Key.font: UIFont.appBoldFontWith(size: 18)]
         navigationController?.navigationBar.barStyle = .default
@@ -96,27 +85,13 @@ class BaseViewController: UIViewController , BaseViewControllerProtocol {
     }
     
     
-    func showLoadingView(isTransparent:Bool? = nil , frame:CGRect? = nil) {
-        if let val = isTransparent , val == true{
-            activityIndicatorView.backgroundColor = .clear
-        }
-        if let frame = frame{
-            loadingIndicator?.frame = frame
-        }
+    func showLoadingView() {
+        
         self.view.addSubview(self.activityIndicatorView)
     }
     
     func hideLoadingView() {
         self.activityIndicatorView.removeFromSuperview()
-    }
-    
-    
-    func showEmptyDataSetView()  {
-        self.view.addSubview(self.emptyDataSetView)
-    }
-    
-    func hideEmptyDataSetView()  {
-        emptyDataSetView.removeFromSuperview()
     }
     
     func hideKeyboard()  {
@@ -139,4 +114,5 @@ class BaseViewController: UIViewController , BaseViewControllerProtocol {
     }
     
     
+ 
 }

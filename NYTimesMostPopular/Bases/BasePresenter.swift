@@ -10,7 +10,11 @@ import Foundation
 
 class BasePresenter {
     private weak var view: BaseViewControllerProtocol?
-    init(view: BaseViewControllerProtocol) {
+}
+
+
+extension BasePresenter: BasePresenterProtocol {
+    func attachView(view: BaseViewControllerProtocol) {
         self.view = view
     }
     func getView() ->  BaseViewControllerProtocol?{

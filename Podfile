@@ -8,7 +8,6 @@ target 'NYTimesMostPopular' do
   # Pods for NYTimesMostPopular
 	pod 'Alamofire', '~> 4.9.0'
   pod 'Kingfisher', '~> 5.0'
-  pod 'NVActivityIndicatorView', '~> 4.4.0'
 
   target 'NYTimesMostPopularTests' do
     inherit! :search_paths

@@ -19,17 +19,23 @@ class MostPopulatNewsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        guard let model = self.cellModel else {
-            return
-        }
-        titleLbl.text = model.title
-        subTitleLbl.text = model.subTitle
-        thumImage.kf.setImage(with: URL(string: model.thumbImageURL))
-        publishDateLbl.text = model.publishDate
+       
+        
     }
 
     func setCellData(cellModel:NewsCellUIModel)  {
         self.cellModel = cellModel
+        guard let model = self.cellModel else {
+                   return
+               }
+        titleLbl.text = model.title
+        subTitleLbl.text = model.subTitle
+    
+
+        thumImage.kf.setImage(with: URL(string: model.thumbImageURL), placeholder: UIImage(named: "Times-logo"), options: nil, progressBlock: nil, completionHandler: {Result in
+            
+        })
+        publishDateLbl.text = model.publishDate
     }
     
 }

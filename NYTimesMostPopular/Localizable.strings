@@ -23,3 +23,6 @@
 "network.error.unknown.title" = "unknown Error";
 "network.error.timedOut.message" = "An Unknown Error Occured";
 "network.error.retryBtnTitle" = "Retry";
+"newslist.failure.message" = "Can't get new at the moment";
+"newslist.failure.title" = "Error";
+"newsList.nodata" = "No data available";

@@ -11,7 +11,6 @@ import UIKit
 protocol BaseViewControllerProtocol:class {
     func showAlertMessage( title:String? ,message: String? , okBtnTitle:String?  , cancelBtnTitle:String?  , okBtnAction: (()->Void)? ,  cancelBtnAction: (()->Void)? , preferredStyle: UIAlertController.Style? )
     func showPlainAlert(title:String? ,message: String? )
-    func showLoadingView(isTransparent:Bool?  , frame:CGRect?)
+    func showLoadingView()
     func hideLoadingView()
-    
 }

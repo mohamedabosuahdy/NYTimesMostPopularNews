@@ -11,10 +11,17 @@ import UIKit
 
 enum NavigationTarget{
     case newsList
-    case newsListItemDetails
+    case newsItemDetails(model:NewsDetailsUIModel)
     
     var viewController: UIViewController?{
         var targetViewController: UIViewController?
+        switch self {
+        case .newsList:
+            targetViewController = MostPopularNewsListViewController.instantiate(fromAppStoryboard: .main)
+        case .newsItemDetails(let model):
+            targetViewController = NewsDetailsViewController.instantiate(fromAppStoryboard: .newsDetails)
+            (targetViewController as! NewsDetailsViewController).setViewData(model: model)
+        }
         
         return targetViewController
     }
@@ -24,29 +31,16 @@ enum NavigationTarget{
 class Router{
     //Navigate to view controllers using navigation controller
     class func navigateTo(target: NavigationTarget ){
-        let rootViewController = UIApplication.shared.topMostViewController()?.children[0] as? UINavigationController
+        let rootViewController = UIApplication.shared.topMostViewController() as? UINavigationController
         if let targetVC = target.viewController{
             rootViewController?.pushViewController(targetVC, animated: true)
         }
     }
     
     class func pop(){
-        let rootViewController = UIApplication.shared.topMostViewController()?.children[0] as? UINavigationController
+        let rootViewController = UIApplication.shared.topMostViewController() as? UINavigationController
         rootViewController?.popViewController(animated: true)
     }
     
-    class func present(target: NavigationTarget ){
-        let rootViewController = UIApplication.shared.topMostViewController()?.children[0] as? UINavigationController
-        if let targetVC = target.viewController{
-            rootViewController?.present(targetVC, animated: true)
-        }
-    }
-    
-    class func setRootView(target: NavigationTarget ){
-        let rootViewController = UIApplication.shared.topMostViewController()?.children[0] as? UINavigationController
-        if let targetVC = target.viewController{
-            rootViewController?.setViewControllers([targetVC], animated: false)
-        }
-    }
     
 }

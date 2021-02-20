@@ -65,6 +65,37 @@ public extension UITableView {
     func dequeueReusableCell<T: UITableViewCell>(with type: T.Type, for indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withIdentifier: String(describing: type.self), for: indexPath) as! T
     }
+    
+    
+    
+       func showEmptyDataSetView()  {
+           guard (self.subviews.filter{$0.tag == 500}).count == 0 else{return}
+           let view  = UIView(frame: CGRect(x: (self.frame.width - 150) / 2, y: (self.frame.height - 170) / 2, width: 150, height: 170 ))
+           let image = UIImageView(image: UIImage(named: "Times-logo"))
+           image.frame = CGRect(x: 0, y: 20, width: 150, height: 90)
+           image.contentMode = .scaleAspectFit
+           image.image = image.image?.withRenderingMode(.alwaysTemplate)
+           image.tintColor = .MainColor
+           let noDataLbl = UILabel(frame: CGRect(x: 0, y: 130, width: 150, height: 30))
+           noDataLbl.textAlignment = .center
+           noDataLbl.text = "newsList.nodata".localized
+           view.addSubview(image)
+           view.addSubview(noDataLbl)
+           noDataLbl.font = UIFont.appRegularFontWith(size: 16)
+        noDataLbl.textColor = .MainColor
+           view.tag = 500
+           self.addSubview(view)
+       }
+       
+       func hideEmptyDataView(){
+           self.subviews.map{view in
+               if view.tag == 500{
+                   view.removeFromSuperview()
+               }
+           }
+       }
+    
+    
 }
 
 
@@ -161,8 +192,8 @@ extension UIView{
         set{
             let shadowRadius:CGFloat = self.viewCornerRadius
             layer.masksToBounds = false
-            layer.shadowColor = UIColor.black.cgColor
-            layer.shadowOpacity = 0.2
+            layer.shadowColor = UIColor.systemGray.cgColor
+            layer.shadowOpacity = 0.4
             layer.shadowOffset = CGSize(width: 0, height: 0)
             layer.shadowRadius = shadowRadius
             layer.shadowPath = UIBezierPath(rect: bounds).cgPath
@@ -175,9 +206,9 @@ extension UIView{
     var allsidesShadow: Bool{
         set{
             self.layer.cornerRadius = self.viewCornerRadius
-            self.layer.shadowColor = UIColor.black.cgColor
+            self.layer.shadowColor = UIColor.systemGray.cgColor
             self.layer.shadowRadius = 5
-            self.layer.shadowOpacity = 0.2
+            self.layer.shadowOpacity = 0.4
             self.layer.shadowOffset = .zero
             }
         get{return self.dropShadow}
@@ -189,8 +220,8 @@ extension UIView{
         set{
             let shadowRadius:CGFloat = 5
             layer.masksToBounds = false
-            layer.shadowColor = UIColor.black.cgColor
-            layer.shadowOpacity = 0.6
+            layer.shadowColor = UIColor.systemGray.cgColor
+            layer.shadowOpacity = 0.8
             layer.shadowOffset = CGSize(width: 1, height: 1)
             layer.shadowRadius = shadowRadius
             layer.shadowPath = UIBezierPath(rect: bounds).cgPath
@@ -212,8 +243,8 @@ extension UIView{
         set{
             layer.cornerRadius = newValue
             clipsToBounds = true
-            layer.shadowColor = UIColor.black.cgColor
-            layer.shadowOpacity = 0.2
+            layer.shadowColor = UIColor.systemGray.cgColor
+            layer.shadowOpacity = 0.4
             layer.shadowOffset = CGSize(width: 0, height: 0)
             layer.shadowRadius = newValue
             layer.shadowPath = UIBezierPath(rect: bounds).cgPath
@@ -309,7 +340,7 @@ extension UITextField {
       func addUnderLine(){
           let bottomLayer = CALayer()
           bottomLayer.frame = CGRect(x: 0.0, y: self.frame.height, width: self.frame.width, height: 0.5)
-          bottomLayer.backgroundColor = UIColor.gray.cgColor
+          bottomLayer.backgroundColor = UIColor.systemGray.cgColor
           self.borderStyle = .none
           self.layer.addSublayer(bottomLayer)
       }
@@ -541,7 +572,7 @@ extension UITextView{
         let textRange = NSMakeRange(0, text.count)
         let attributedText = NSMutableAttributedString(string: text)
       
-        let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.black, .font: UIFont.appBoldFontWith(size: 13) , .underlineStyle : NSUnderlineStyle.single.rawValue]
+        let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.label, .font: UIFont.appBoldFontWith(size: 13) , .underlineStyle : NSUnderlineStyle.single.rawValue]
 
         attributedText.addAttributes(attributes, range: textRange)
         

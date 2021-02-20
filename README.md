@@ -19,8 +19,8 @@ A simple app to hit the NY Times Most Popular Articles API and show a list of ar
 </p>
 
 <p align="row">
-<img src= "https://i.ibb.co/Ld27VnB/1.png" width="400" >
-<img src= "https://i.ibb.co/KFKPygX/2.png" width="400" >
+<img src= "https://i.ibb.co/Ld27VnB/1.png" width="300" >
+<img src= "https://i.ibb.co/KFKPygX/2.png" width="300" >
 </p>
 
 ## Features

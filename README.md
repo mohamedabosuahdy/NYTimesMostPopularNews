@@ -19,7 +19,7 @@ A simple app to hit the NY Times Most Popular Articles API and show a list of ar
 </p>
 
 <p align="row">
-<img src= "https://media.giphy.com/media/HYOlBKJBqgAfe/giphy.gif" width="400" >
+<img src= "https://drive.google.com/file/d/1PlKqo5UNgyb5lQf7GD6gvvogkcYCTWSd/view?usp=sharing" width="400" >
 <img src= "https://media.giphy.com/media/HYOlBKJBqgAfe/giphy.gif" width="400" >
 </p>
 

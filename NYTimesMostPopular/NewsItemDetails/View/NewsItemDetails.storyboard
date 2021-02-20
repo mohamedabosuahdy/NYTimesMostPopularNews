@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News Details View Controller-->
+        <scene sceneID="3vI-az-3No">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailsViewController" id="Nr6-HV-3Mz" customClass="NewsDetailsViewController" customModule="NYTimesMostPopular" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EFJ-gk-Q2M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUW-T5-nQO">
+                                <rect key="frame" x="16" y="16" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="appBoldFontWithSize">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjF-Fp-Swf">
+                                <rect key="frame" x="16" y="289" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="appRegularFontWithSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcX-qk-4Qh">
+                                <rect key="frame" x="16" y="325.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="newsDetails.publishedBy"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="appBoldFontWithSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGA-jK-Ggt">
+                                <rect key="frame" x="16" y="351" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="appBoldFontWithSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqT-Pq-IId">
+                                <rect key="frame" x="16" y="381.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="appRegularFontWithSize">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQq-jV-5dY">
+                                <rect key="frame" x="16" y="81" width="288" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="qm3-rE-87x"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pty-44-KTJ">
+                                <rect key="frame" x="16" y="44.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="appRegularFontWithSize">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dC7-MF-xy9">
+                                <rect key="frame" x="16" y="418" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="newsDetails.copyright"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="appBoldFontWithSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daB-vc-RBE">
+                                <rect key="frame" x="16" y="443.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="appRegularFontWithSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="daB-vc-RBE" firstAttribute="leading" secondItem="bfa-rE-J8f" secondAttribute="leading" constant="16" id="9de-5W-Ozz"/>
+                            <constraint firstItem="EQq-jV-5dY" firstAttribute="top" secondItem="Pty-44-KTJ" secondAttribute="bottom" constant="16" id="AgA-mX-S6h"/>
+                            <constraint firstItem="bfa-rE-J8f" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="daB-vc-RBE" secondAttribute="trailing" constant="16" id="CFU-pl-U30"/>
+                            <constraint firstItem="EUW-T5-nQO" firstAttribute="top" secondItem="bfa-rE-J8f" secondAttribute="top" constant="16" id="CSS-rN-0tR"/>
+                            <constraint firstItem="dC7-MF-xy9" firstAttribute="leading" secondItem="bfa-rE-J8f" secondAttribute="leading" constant="16" id="D1E-EX-REf"/>
+                            <constraint firstItem="Pty-44-KTJ" firstAttribute="top" secondItem="EUW-T5-nQO" secondAttribute="bottom" constant="8" id="Evd-38-IWm"/>
+                            <constraint firstItem="iGA-jK-Ggt" firstAttribute="leading" secondItem="bfa-rE-J8f" secondAttribute="leading" constant="16" id="MNR-1I-Zme"/>
+                            <constraint firstItem="aqT-Pq-IId" firstAttribute="top" secondItem="iGA-jK-Ggt" secondAttribute="bottom" constant="10" id="Nck-a0-50k"/>
+                            <constraint firstItem="bfa-rE-J8f" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dC7-MF-xy9" secondAttribute="trailing" constant="16" id="Pkv-jX-dxD"/>
+                            <constraint firstItem="aqT-Pq-IId" firstAttribute="leading" secondItem="bfa-rE-J8f" secondAttribute="leading" constant="16" id="R6i-to-pD8"/>
+                            <constraint firstItem="Pty-44-KTJ" firstAttribute="leading" secondItem="bfa-rE-J8f" secondAttribute="leading" constant="16" id="Ufc-xU-65y"/>
+                            <constraint firstItem="daB-vc-RBE" firstAttribute="top" secondItem="dC7-MF-xy9" secondAttribute="bottom" constant="5" id="V3x-vg-rUI"/>
+                            <constraint firstItem="bfa-rE-J8f" firstAttribute="trailing" secondItem="EQq-jV-5dY" secondAttribute="trailing" constant="16" id="Ven-SL-9Kv"/>
+                            <constraint firstItem="bfa-rE-J8f" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iGA-jK-Ggt" secondAttribute="trailing" constant="16" id="X7B-u1-lmp"/>
+                            <constraint firstItem="bfa-rE-J8f" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xjF-Fp-Swf" secondAttribute="trailing" constant="16" id="aod-UI-pyS"/>
+                            <constraint firstItem="EUW-T5-nQO" firstAttribute="leading" secondItem="bfa-rE-J8f" secondAttribute="leading" constant="16" id="bRD-XW-cX0"/>
+                            <constraint firstItem="EQq-jV-5dY" firstAttribute="leading" secondItem="bfa-rE-J8f" secondAttribute="leading" constant="16" id="bly-Ii-Gie"/>
+                            <constraint firstItem="bfa-rE-J8f" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aqT-Pq-IId" secondAttribute="trailing" constant="16" id="d4O-FG-OV6"/>
+                            <constraint firstItem="TcX-qk-4Qh" firstAttribute="leading" secondItem="bfa-rE-J8f" secondAttribute="leading" constant="16" id="eV0-ky-diQ"/>
+                            <constraint firstItem="xjF-Fp-Swf" firstAttribute="top" secondItem="EQq-jV-5dY" secondAttribute="bottom" constant="8" id="eWN-pU-cOL"/>
+                            <constraint firstItem="xjF-Fp-Swf" firstAttribute="leading" secondItem="bfa-rE-J8f" secondAttribute="leading" constant="16" id="fDR-bY-zsI"/>
+                            <constraint firstItem="TcX-qk-4Qh" firstAttribute="top" secondItem="xjF-Fp-Swf" secondAttribute="bottom" constant="16" id="jvA-mS-cGL"/>
+                            <constraint firstItem="bfa-rE-J8f" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TcX-qk-4Qh" secondAttribute="trailing" constant="16" id="kPz-dF-6AP"/>
+                            <constraint firstItem="bfa-rE-J8f" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pty-44-KTJ" secondAttribute="trailing" constant="16" id="o9C-mi-Ptm"/>
+                            <constraint firstItem="iGA-jK-Ggt" firstAttribute="top" secondItem="TcX-qk-4Qh" secondAttribute="bottom" constant="5" id="piT-3C-7qh"/>
+                            <constraint firstItem="dC7-MF-xy9" firstAttribute="top" secondItem="aqT-Pq-IId" secondAttribute="bottom" constant="16" id="xRz-WD-8pp"/>
+                            <constraint firstItem="bfa-rE-J8f" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EUW-T5-nQO" secondAttribute="trailing" constant="16" id="ywv-3L-FE2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bfa-rE-J8f"/>
+                    </view>
+                    <connections>
+                        <outlet property="captionLbl" destination="xjF-Fp-Swf" id="Zsi-YS-HQE"/>
+                        <outlet property="copyrightLbl" destination="daB-vc-RBE" id="9ye-Wp-qyM"/>
+                        <outlet property="descLbl" destination="Pty-44-KTJ" id="ORb-sF-VT9"/>
+                        <outlet property="mediaImage" destination="EQq-jV-5dY" id="iUe-RU-YqW"/>
+                        <outlet property="publishDateLbl" destination="aqT-Pq-IId" id="22z-au-Vgh"/>
+                        <outlet property="publishersLbl" destination="iGA-jK-Ggt" id="Kg8-b9-VTh"/>
+                        <outlet property="titleLbl" destination="EUW-T5-nQO" id="dQN-yG-Qjb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30N-us-ZH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258.75" y="134.1549295774648"/>
+        </scene>
+    </scenes>
+</document>

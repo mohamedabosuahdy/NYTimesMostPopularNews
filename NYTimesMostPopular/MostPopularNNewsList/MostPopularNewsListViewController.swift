@@ -26,11 +26,12 @@ class MostPopularNewsListViewController: BaseViewController {
         presenter.attachView(view: self)
         newsTableView.register(cellType: MostPopulatNewsTableViewCell.self)
         showLoadingView()
+        setTitle(title: "newslist.title".localized)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter.getNews(backDays: .lastMonth)
+        presenter.getNews()
     }
 
 }
@@ -45,14 +46,15 @@ extension MostPopularNewsListViewController: UITableViewDelegate , UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: MostPopulatNewsTableViewCell.self, for: indexPath)
         let newsItem = presenter.getNewsItemAt(index: indexPath.row)
-        var url = ""
-        if let media = newsItem.media , !media.isEmpty , let meta = media[0].mediametadata , !meta.isEmpty ,let imageUrl = meta[0].url{
-            url = imageUrl
-        }
-        cell.setCellData(cellModel: NewsCellUIModel(title: newsItem.title ?? "" , subTitle: newsItem.abstractField ?? "", thumbImageURL:  url, publishDate: newsItem.publishedDate ?? ""))
+        
+        cell.setCellData(cellModel: newsItem)
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.showNewsItemDetailsAt(index: indexPath.row)
+    }
 }
 
 
@@ -62,7 +64,9 @@ extension MostPopularNewsListViewController: MostPopularNewsListViewControllerPr
     }
     
     func didFailGetNewsList() {
-        showPlainAlert(title: "newslist.failure.message".localized, message: "newslist.failure.title".localized)
+        showAlertMessage(title: "newslist.failure.message".localized, message: "newslist.failure.title".localized, okBtnAction: {
+            self.presenter.getNews()
+        }, cancelBtnAction: nil)
     }
     
     func didGetEmptyNewsList() {

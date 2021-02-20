@@ -11,6 +11,7 @@ import UIKit
 
 enum StoryBoardNames: String {
     case main = "Main"
+    case newsDetails = "NewsItemDetails"
     
     
     var instance : UIStoryboard {

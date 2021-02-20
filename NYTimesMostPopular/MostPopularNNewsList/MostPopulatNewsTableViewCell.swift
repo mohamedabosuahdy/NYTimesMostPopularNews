@@ -30,10 +30,7 @@ class MostPopulatNewsTableViewCell: UITableViewCell {
                }
         titleLbl.text = model.title
         subTitleLbl.text = model.subTitle
-    
-
         thumImage.kf.setImage(with: URL(string: model.thumbImageURL), placeholder: UIImage(named: "Times-logo"), options: nil, progressBlock: nil, completionHandler: {Result in
-            
         })
         publishDateLbl.text = model.publishDate
     }

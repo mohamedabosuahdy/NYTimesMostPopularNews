@@ -23,6 +23,14 @@
 "network.error.unknown.title" = "unknown Error";
 "network.error.timedOut.message" = "An Unknown Error Occured";
 "network.error.retryBtnTitle" = "Retry";
-"newslist.failure.message" = "Can't get new at the moment";
+
+
+
+//newslist
+"newslist.failure.message" = "Can't get news at the moment";
 "newslist.failure.title" = "Error";
 "newsList.nodata" = "No data available";
+"newslist.title" = "Most Popular";
+"newsDetails.publishedBy" = "Published";
+"newsDetails.copyright" = "Copyright";
+"newsDetails.title" = "Details";
